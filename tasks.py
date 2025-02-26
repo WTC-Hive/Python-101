@@ -1,30 +1,32 @@
-# Task 1
-def get_user_info():
-    """
-    Ask the user for their name, age, and favorite color.
-    Return a dictionary with the following structure:
-    {
-        "name": <user's name>,
-        "age": <user's age>,
-        "favorite_color": <user's favorite color>
-    }
-    """
-    name = input("Enter your name: ")
-    age = int(input("Enter your age: "))
-    favorite_color = input("Enter your favorite color: ")
+# # Task 1
+# def get_user_info():
+#     """
+#     Ask the user for their name, age, and favorite color.
+#     Return a dictionary with the following structure:
+#     {
+#         "name": <user's name>,
+#         "age": <user's age>,
+#         "favorite_color": <user's favorite color>
+#     }
+#     """
+#     name = input("Enter your name: ")
+#     age = int(input("Enter your age: "))
+#     favorite_color = input("Enter your favorite color: ")
     
-    return {"name" : name,
-            "age" : age,
-            "favorite_color" : favorite_color}
+#     return {"name" : name,
+#             "age" : age,
+            # "favorite_color" : favorite_color}
 
-# # Task 2
-# def calculate_bmi(weight, height):
-#     """
-#     Calculate the Body Mass Index (BMI) using the formula:
-#     BMI = weight (kg) / (height (m) ** 2)
-#     Return the BMI rounded to 2 decimal places.
-#     """
-#     pass
+# Task 2
+def calculate_bmi(weight, height):
+    """
+    Calculate the Body Mass Index (BMI) using the formula:
+    BMI = weight (kg) / (height (m) ** 2)
+    Return the BMI rounded to 2 decimal places.
+    """
+    bmi = weight / (height**2)
+    bmi = round(bmi, 2)
+    return bmi
 
 # # Task 3
 # def create_shopping_list(items):
@@ -86,4 +88,4 @@ def get_user_info():
 #     """
 #     pass
 
-print(get_user_info())
+#print(calculate_bmi())
