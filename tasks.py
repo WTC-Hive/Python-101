@@ -18,26 +18,34 @@
             # "favorite_color" : favorite_color}
 
 # Task 2
-def calculate_bmi(weight, height):
-    """
-    Calculate the Body Mass Index (BMI) using the formula:
-    BMI = weight (kg) / (height (m) ** 2)
-    Return the BMI rounded to 2 decimal places.
-    """
-    bmi = weight / (height**2)
-    bmi = round(bmi, 2)
-    return bmi
+# def calculate_bmi(weight, height):
+#     """
+#     Calculate the Body Mass Index (BMI) using the formula:
+#     BMI = weight (kg) / (height (m) ** 2)
+#     Return the BMI rounded to 2 decimal places.
+#     """
+#     bmi = weight / (height**2)
+#     bmi = round(bmi, 2)
+#     return bmi
 
 # # Task 3
-# def create_shopping_list(items):
-#     """
-#     Given a list of items, create a shopping list.
-#     Return a dictionary where the keys are the items and the values are the quantities (default to 1).
-#     Example:
-#     Input: ["apple", "banana", "apple"]
-#     Output: {"apple": 2, "banana": 1}
-#     """
-#     pass
+def create_shopping_list(items):
+    """
+    Given a list of items, create a shopping list.
+    Return a dictionary where the keys are the items and the values are the quantities (default to 1).
+    Example:
+    Input: ["apple", "banana", "apple"]
+    Output: {"apple": 2, "banana": 1}
+    """
+    shopping_list = {}
+    for item in items:
+        if item not in shopping_list:
+            quantity = int(input(f"How many {item}s would you like : "))
+            shopping_list[item] = quantity
+        else:
+            return 
+
+    return shopping_list
 
 # # Task 4
 # def count_word_frequency(text):
@@ -88,4 +96,4 @@ def calculate_bmi(weight, height):
 #     """
 #     pass
 
-#print(calculate_bmi())
+print(create_shopping_list(["apple", "banana", "pear"]))
