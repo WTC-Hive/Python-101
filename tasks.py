@@ -28,26 +28,26 @@
 #     bmi = round(bmi, 2)
 #     return bmi
 
-# # Task 3
-def create_shopping_list(items):
-    """
-    Given a list of items, create a shopping list.
-    Return a dictionary where the keys are the items and the values are the quantities (default to 1).
-    Example:
-    Input: ["apple", "banana", "apple"]
-    Output: {"apple": 2, "banana": 1}
-    """
-    shopping_list = {}
-    for item in items:
-        if item not in shopping_list:
-            quantity = int(input(f"How many {item}s would you like : "))
-            shopping_list[item] = quantity
-        else:
-            return 
+# Task 3
+# def create_shopping_list(items):
+#     """
+#     Given a list of items, create a shopping list.
+#     Return a dictionary where the keys are the items and the values are the quantities (default to 1).
+#     Example:
+#     Input: ["apple", "banana", "apple"]
+#     Output: {"apple": 2, "banana": 1}
+#     """
+#     shopping_list = {}
+#     for item in items:
+#         if item not in shopping_list:
+#             quantity = int(input(f"How many {item}s would you like : "))
+#             shopping_list[item] = quantity
+#         else:
+#             return 
 
-    return shopping_list
+#     return shopping_list
 
-# # Task 4
+# Task 4
 # def count_word_frequency(text):
 #     """
 #     Given a string, count the frequency of each word.
@@ -56,17 +56,34 @@ def create_shopping_list(items):
 #     Input: "hello world hello"
 #     Output: {"hello": 2, "world": 1}
 #     """
-#     pass
 
-# # Task 5
-# def check_number(num):
-#     """
-#     Given a number, return:
-#     - "Positive" if the number is greater than 0.
-#     - "Negative" if the number is less than 0.
-#     - "Zero" if the number is 0.
-#     """
-#     pass
+#     words = text.lower().split()
+#     frequency = {}
+    
+#     for word in words:
+#         if word in frequency:
+#             frequency[word] += 1
+#         else:
+#             frequency[word] = 1
+    
+#     return frequency
+
+# Task 5
+def check_number(num):
+    """
+    Given a number, return:
+    - "Positive" if the number is greater than 0.
+    - "Negative" if the number is less than 0.
+    - "Zero" if the number is 0.
+    """
+    if num > 0:
+        return "Positive"
+    elif num < 0:
+        return "Negative"
+    elif num == 0:
+        return "Zero"
+    else:
+        return "Invalid Input. Enter a valid number"
 
 # # Task 6
 # def sum_even_numbers(numbers):
@@ -96,4 +113,4 @@ def create_shopping_list(items):
 #     """
 #     pass
 
-print(create_shopping_list(["apple", "banana", "pear"]))
+print(check_number(6))
