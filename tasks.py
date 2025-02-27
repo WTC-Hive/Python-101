@@ -122,8 +122,15 @@ def analyze_text(text):
     3. Return a dictionary with the results.
     Example:
     Input: "Hello world"
-    Output: {"word_count": 2, "vowel_count": 3}
+    Output: {"split_words": 2, "vowel": 3}
     """
-    pass
+    
+    
+    vowel = 0
+    split_words = text.split()
 
-print(find_first_negative([1,4,6,78,2]))
+    for item in text:
+        if item in ["a","A","e","E","i","I","o","O","u","U"]:
+            vowel += 1
+    
+    return {"split_words": len(split_words), "vowel": vowel}
