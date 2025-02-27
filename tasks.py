@@ -69,28 +69,33 @@
 #     return frequency
 
 # Task 5
-def check_number(num):
-    """
-    Given a number, return:
-    - "Positive" if the number is greater than 0.
-    - "Negative" if the number is less than 0.
-    - "Zero" if the number is 0.
-    """
-    if num > 0:
-        return "Positive"
-    elif num < 0:
-        return "Negative"
-    elif num == 0:
-        return "Zero"
-    else:
-        return "Invalid Input. Enter a valid number"
+# def check_number(num):
+#     """
+#     Given a number, return:
+#     - "Positive" if the number is greater than 0.
+#     - "Negative" if the number is less than 0.
+#     - "Zero" if the number is 0.
+#     """
+#     if num > 0:
+#         return "Positive"
+#     elif num < 0:
+#         return "Negative"
+#     elif num == 0:
+#         return "Zero"
+#     else:
+#         return "Invalid Input. Enter a valid number"
 
-# # Task 6
-# def sum_even_numbers(numbers):
-#     """
-#     Given a list of numbers, return the sum of all even numbers.
-#     """
-#     pass
+# Task 6
+def sum_even_numbers(numbers):
+    """
+    Given a list of numbers, return the sum of all even numbers.
+    """
+    even_numbers = 0
+    
+    for number in numbers:
+        if number % 2 == 0:
+            even_numbers += number
+    return even_numbers
 
 # # Task 7
 # def find_first_negative(numbers):
@@ -113,4 +118,4 @@ def check_number(num):
 #     """
 #     pass
 
-print(check_number(6))
+print(sum_even_numbers([2,8,45,3,6,8,9,23]))
