@@ -9,7 +9,13 @@ def get_user_info():
         "favorite_color": <user's favorite color>
     }
     """
-    pass
+    name = input("Enter your name: ")
+    age = int(input("Enter your age: "))
+    favorite_color = input("Enter your favorite color: ")
+    
+    return {"name" : name,
+            "age" : age,
+            "favorite_color" : favorite_color}
 
 # Task 2
 def calculate_bmi(weight, height):
@@ -18,7 +24,9 @@ def calculate_bmi(weight, height):
     BMI = weight (kg) / (height (m) ** 2)
     Return the BMI rounded to 2 decimal places.
     """
-    pass
+    bmi = weight / (height**2)
+    bmi = round(bmi, 2)
+    return bmi
 
 # Task 3
 def create_shopping_list(items):
@@ -29,7 +37,15 @@ def create_shopping_list(items):
     Input: ["apple", "banana", "apple"]
     Output: {"apple": 2, "banana": 1}
     """
-    pass
+    shopping_list = {}
+    for item in items:
+        if item not in shopping_list:
+            quantity = int(input(f"How many {item}s would you like : "))
+            shopping_list[item] = quantity
+        else:
+            return 
+
+    return shopping_list
 
 # Task 4
 def count_word_frequency(text):
@@ -40,7 +56,17 @@ def count_word_frequency(text):
     Input: "hello world hello"
     Output: {"hello": 2, "world": 1}
     """
-    pass
+
+    words = text.lower().split()
+    frequency = {}
+    
+    for word in words:
+        if word in frequency:
+            frequency[word] += 1
+        else:
+            frequency[word] = 1
+    
+    return frequency
 
 # Task 5
 def check_number(num):
@@ -50,14 +76,26 @@ def check_number(num):
     - "Negative" if the number is less than 0.
     - "Zero" if the number is 0.
     """
-    pass
+    if num > 0:
+        return "Positive"
+    elif num < 0:
+        return "Negative"
+    elif num == 0:
+        return "Zero"
+    else:
+        return "Invalid Input. Enter a valid number"
 
 # Task 6
 def sum_even_numbers(numbers):
     """
     Given a list of numbers, return the sum of all even numbers.
     """
-    pass
+    even_numbers = 0
+    
+    for number in numbers:
+        if number % 2 == 0:
+            even_numbers += number
+    return even_numbers
 
 # Task 7
 def find_first_negative(numbers):
@@ -65,7 +103,15 @@ def find_first_negative(numbers):
     Given a list of numbers, use a while loop to find the first negative number.
     Return the first negative number or None if there are no negative numbers.
     """
-    pass
+    index_num = 0
+    
+    while index_num < len(numbers):
+        if numbers[index_num] < 0:
+            return numbers[index_num]
+        index_num += 1
+    
+    return None
+            
 
 # Task 8
 def analyze_text(text):
@@ -76,6 +122,15 @@ def analyze_text(text):
     3. Return a dictionary with the results.
     Example:
     Input: "Hello world"
-    Output: {"word_count": 2, "vowel_count": 3}
+    Output: {"split_words": 2, "vowel": 3}
     """
-    pass
+    
+    
+    vowel = 0
+    split_words = text.split()
+
+    for item in text:
+        if item in ["a","A","e","E","i","I","o","O","u","U"]:
+            vowel += 1
+    
+    return {"split_words": len(split_words), "vowel": vowel}
